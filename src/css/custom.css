@@ -1,0 +1,254 @@
+/**
+ * Any CSS included here will be global. The classic template
+ * bundles Infima by default. Infima is a CSS framework designed to
+ * work well for content-centric websites.
+ */
+
+/* You can override the default Infima variables here. */
+@font-face {
+  font-family: 'Inter var';
+  font-weight: 100 900;
+  font-display: swap;
+  font-style: normal;
+  font-named-instance: 'Regular';
+  src: url('./fonts/Inter-roman-latin.var.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Inter var';
+  font-weight: 100 900;
+  font-display: swap;
+  font-style: italic;
+  font-named-instance: 'Italic';
+  src: url('./fonts/Inter-italic-latin.var.woff2') format('woff2');
+}
+
+h1{
+  font-size: 33px;
+  font-weight: 600;
+  text-decoration: none;
+  /* font-weight: 600; */
+  /* margin-top : 1px; */
+  /* margin-bottom : 11px; */
+  /* text-align: left;   */
+  /* font-weight: 300; */
+  /* text-shadow: 2px 2px #83c5be; */
+}
+
+h2{
+  font-size: 21.5px;
+  /* font-family: Inter; */
+  text-decoration: none;
+  /* padding-top: 5px; */
+  margin: 0%;
+  /* margin-bottom : 11px; */
+  /* text-align: left; */
+  /* font-weight: bold; */
+  /* text-shadow: 2px 2px #83c5be; */
+}
+
+.high {
+  color:#E83E8C;
+}
+.bhigh {
+  color:#030F86;
+}
+.latex{
+  font-size: 15px;
+}
+
+.nlinks{
+  text-decoration: none;
+}
+
+h3{
+  font-size: 20px;
+  /* font-family: Inter; */
+  text-decoration: none;
+  /* padding-top: 5px; */
+  /* margin-top : 1px; */
+  /* margin-bottom : 11px; */
+  text-align: left;
+  /* font-weight: bold; */
+}
+
+/* hr {
+  border: 0;
+  border-top: 1px solid #000000;
+} */
+
+h4{
+  font-size: 16px;
+  /* font-family: Inter; */
+  /* text-decoration: none; */
+  /* padding-top: 5px; */
+  /* margin-top : 1px; */
+  text-align: left;
+  /* margin-bottom : 11px; */
+  /* text-shadow: 2px 2px #83c5be; */
+}
+
+
+:root {
+  --ifm-color-primary: #6565d5;
+  --ifm-color-primary-dark: #5959d2;
+  --ifm-color-primary-darker: #4c4cce;
+  --ifm-color-primary-darkest: #4040cb;
+  --ifm-color-primary-light: #7e7edc;
+  --ifm-color-primary-lighter: #8a8adf;
+  --ifm-color-primary-lightest: #afafe9;
+
+  --ifm-font-family-base: 'Inter var', -apple-system, BlinkMacSystemFont,
+    'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans',
+    'Droid Sans', 'Helvetica Neue', sans-serif;
+  --ifm-font-size-base: 16px;
+
+  --ifm-footer-padding-vertical: 3rem;
+}
+
+/* For readability concerns, you should choose a lighter palette in dark mode. */
+html[data-theme='dark'] {
+  --ifm-color-primary: #7f7ff0;
+  --ifm-color-primary-dark: rgb(114, 114, 216);
+  --ifm-color-primary-darker: rgb(108, 108, 204);
+  --ifm-color-primary-darkest: rgb(89, 89, 168);
+  --ifm-color-primary-light: rgb(146, 146, 242);
+  --ifm-color-primary-lighter: rgb(165, 165, 245);
+  --ifm-color-primary-lightest: rgb(191, 191, 248);
+}
+
+.navbar__items {
+  font-size: 0.9rem;
+}
+
+.footer__links {
+  margin-bottom: 3rem;
+}
+
+.footer__copyright {
+  text-align: start;
+}
+
+.markdown h1 {
+  margin-top: 1rem;
+}
+
+.markdown h2 {
+  margin-top: 0rem;
+}
+
+@media screen and (max-width: 767px) {
+  :root {
+    --ifm-font-size-base: 16px;
+  }
+
+  .markdown h1 {
+    --ifm-h1-font-size: 1.5rem;
+  }
+
+  .markdown h2 {
+    --ifm-h2-font-size: 1.375rem;
+  }
+
+  .markdown h3 {
+    --ifm-h3-font-size: 1.25rem;
+  }
+}
+
+.docusaurus-highlight-code-line {
+  background-color: rgba(0, 0, 0, 0.1);
+  display: block;
+  margin: 0 calc(-1 * var(--ifm-pre-padding));
+  padding: 0 var(--ifm-pre-padding);
+}
+
+[data-theme='dark'] .docusaurus-highlight-code-line {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+div[class^='announcementBar_'] {
+  background-color: var(--ifm-color-primary);
+  color: #fff;
+  font-weight: bold;
+}
+
+.menu {
+  font-size: 0.875rem;
+}
+
+.theme-doc-markdown details {
+  --ifm-alert-background-color: transparent;
+  border: 1px solid var(--ifm-color-primary);
+}
+
+.theme-doc-markdown details h2,
+.theme-doc-markdown details h3,
+.theme-doc-markdown details h4,
+.theme-doc-markdown details h5,
+.theme-doc-markdown details h6 {
+  margin-bottom: 0 !important;
+}
+
+.docs-doc-page .pagination-nav__item:first-child .pagination-nav__label::before,
+.docs-doc-page .pagination-nav__item--next .pagination-nav__label::after {
+  content: '';
+}
+
+.pagination-nav__item .pagination-nav__label {
+  font-size: 1.5rem;
+}
+
+.docs-doc-page .pagination-nav__item {
+  max-width: 100%;
+}
+
+.navbar-icon:before {
+  background-repeat: no-repeat;
+  content: '';
+  display: flex;
+  height: 24px;
+  width: 24px;
+  transition: all 300ms ease-in-out;
+}
+
+.navbar-icon:hover {
+  opacity: 0.8;
+}
+
+.navbar-icon-github:before {
+  background-image: url('/img/icons8-github.svg');
+}
+
+html[data-theme='dark'] .navbar-icon-github:before {
+  background-image: url('/img/icons8-github-light.svg');
+  height: 28px;
+  width: 28px;
+}
+
+.navbar-icon-twitter:before {
+  background-image: url('/img/icons8-twitter.svg');
+}
+
+html[data-theme='dark'] .navbar-icon-twitter:before {
+  background-image: url('/img/icons8-twitter-light.svg');
+}
+
+.navbar-icon-facebook:before {
+  background-image: url('/img/icons8-facebook.svg');
+}
+
+html[data-theme='dark'] .navbar-icon-facebook:before {
+  background-image: url('/img/icons8-facebook-light.svg');
+  height: 28px;
+  width: 28px;
+}
+
+.navbar-icon-telegram:before {
+  background-image: url('/img/icons8-telegram.svg');
+}
+
+html[data-theme='dark'] .navbar-icon-telegram:before {
+  background-image: url('/img/icons8-telegram-light.svg');
+  height: 28px;
+  width: 24px;
+}
