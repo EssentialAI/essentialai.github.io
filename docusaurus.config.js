@@ -17,7 +17,7 @@ const config = {
   favicon: 'img/brain1.ico',
   organizationName: 'EssentialAI', // Usually your GitHub org/user name.
   projectName: 'essentialai.github.io', // Usually your repo name.
-  // deploymentBranch: 'gh-pages',
+  deploymentBranch: 'gh-pages',
 
   presets: [
     [
