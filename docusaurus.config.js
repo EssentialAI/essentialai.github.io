@@ -10,7 +10,7 @@ const katex = require('rehype-katex');
 const config = {
   title: 'The Essential AI',
   tagline: 'Learn AI, the Math way!',
-  url: 'https://essentialai.github.io/',
+  url: 'https://blog.theessentialai.com/',
   baseUrl: '/',
   onBrokenLinks: 'warn',
   onBrokenMarkdownLinks: 'warn',
@@ -58,6 +58,29 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
+      algolia: {
+        // The application ID provided by Algolia
+        appId: 'GT852U1XQK',
+  
+        // Public API key: it is safe to commit it
+        apiKey: 'ddadeaac9a2a8bb4f70bfe194c3a1bea',
+  
+        indexName: 'naresh',
+  
+        // Optional: see doc section below
+        contextualSearch: true,
+  
+        // Optional: Specify domains where the navigation should occur through window.location instead on history.push. Useful when our Algolia config crawls multiple documentation sites and we want to navigate with window.location.href to them.
+        externalUrlRegex: 'external\\.com|domain\\.com',
+  
+        // Optional: Algolia search parameters
+        searchParameters: {},
+  
+        // Optional: path for search page that enabled by default (`false` to disable it)
+        searchPagePath: 'search',
+  
+        //... other Algolia params
+      },
       navbar: {
         title: 'The Essential AI blog',
         
