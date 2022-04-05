@@ -26,6 +26,13 @@ const sidebars = {
       collapsed: false,
       items: ['mnist-4-neurons'],
     },
+
+    {
+      type: 'category',
+      label: 'Research',
+      collapsed: false,
+      items: ['momentum'],
+    },
   ],
 };
 

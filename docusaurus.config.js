@@ -18,6 +18,7 @@ const config = {
   organizationName: 'EssentialAI', // Usually your GitHub org/user name.
   projectName: 'EssentialAI.github.io', // Usually your repo name.
   deploymentBranch: 'gh-pages',
+  trailingSlash: false,
 
   presets: [
     [
@@ -72,25 +73,25 @@ const config = {
           //   label: ' ',
           // },
           {
-            href: 'https://hopnet24.wixsite.com/my-site-22',
+            href: 'https://essentialai.org',
             label: 'The Essential AI',
             position: 'left',
           },
           {
-            href: 'mnist-4-neurons',
+            href: 'momentum',
             label: 'Our research',
             position: 'left',
           },
           {
-            href: 'mnist-4-neurons',
+            href: 'https://github.com/EssentialAI',
             label: 'Code',
             position: 'left',
           },
-          {
-            href: 'https://github.com/EssentialAI',
-            label: 'GitHub',
-            position: 'right',
-          },
+          // {
+          //   href: 'https://github.com/EssentialAI',
+          //   label: 'GitHub',
+          //   position: 'right',
+          // },
         ],
       },
       footer: {

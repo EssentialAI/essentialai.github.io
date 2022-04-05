@@ -7,11 +7,14 @@ slug: /
 
 The Essential AI was initially started as a blog. This section is a series of seemingly disconnected articles aimed at providing a mathematical intuition behind several Machine Learning models.
 
+<div class = "pagination-nav__link1"><h1 class = 'markdown h2'><a href = "mnist-4-neurons">Can 4 output neurons classify 10 classes?</a></h1>
+
 March 28, 2022
 
-<h1 class = 'markdown h2'><a href = "mnist-4-neurons">Can 4 output neurons classify 10 classes?</a></h1>
+The answer is Yes! Wait a minute! Shouldn't there be as many output neurons as the number of classes for an image classification model? Actually No! We shall dive deep into this topic using mathematical reasoning. This article is a solution to an exercise in the "Neural networks and Deep Learning" book by Micheal Nielsen.
 
-The answer is Yes! Wait a minute! Shouldn't there be as many output neurons as the number of classes for an image classification model? Actually No! We shall dive deep into this topic using mathematical reasoning. This article is a solution to an exercise in the "Neural networks and Deep Learning" book by Micheal Nielsen. -->
+</div>
+
 
 
 <!-- Or **try Docusaurus immediately** with **[docusaurus.new](https://docusaurus.new)**.
