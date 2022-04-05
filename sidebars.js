@@ -23,6 +23,7 @@ const sidebars = {
     {
       type: 'category',
       label: 'Articles',
+      collapsed: false,
       items: ['mnist-4-neurons'],
     },
   ],

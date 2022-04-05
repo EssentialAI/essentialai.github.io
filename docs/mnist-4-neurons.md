@@ -17,3 +17,21 @@ digit. Why should our network use $10$ neurons instead? Isn’t that inefficient
 
 :::
 
+In this article we shall implement a neural network with just $4$ neurons to classify $10$ classes using the above idea. Can sigmoid activation function perform multi-class classification? Hold that thought.
+
+$$
+\sigma(z) = \frac{1}{1+e^{-z}}
+$$
+
+## Testing a heading
+```python
+import tensorflow as tf
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+from keras.datasets import mnist, fashion_mnist
+from keras.models import Sequential
+from keras.layers import Dense
+from keras.utils import np_utils
+from sklearn.utils import shuffle
+```

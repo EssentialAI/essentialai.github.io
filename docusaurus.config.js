@@ -10,18 +10,18 @@ const katex = require('rehype-katex');
 const config = {
   title: 'The Essential AI',
   tagline: 'Learn AI, the Math way!',
-  url: 'https://essentialai.github.io',
+  url: 'https://essentialai.github.io/',
   baseUrl: '/',
   onBrokenLinks: 'warn',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/brain1.ico',
   organizationName: 'EssentialAI', // Usually your GitHub org/user name.
-  projectName: 'essentialai.github.io', // Usually your repo name.
+  projectName: 'EssentialAI.github.io', // Usually your repo name.
   deploymentBranch: 'gh-pages',
 
   presets: [
     [
-      'classic',
+      '@docusaurus/preset-classic',
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
         docs: {
@@ -58,20 +58,36 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       navbar: {
-        title: 'The Essential AI',
+        title: 'The Essential AI blog',
+        
         // logo: {
         //   alt: 'My Site Logo',
         //   // src: 'img/brain1.ico',
         // },
         items: [
+          // {
+          //   type: 'doc',
+          //   docId: 'intro',
+          //   position: 'left',
+          //   label: ' ',
+          // },
           {
-            type: 'doc',
-            docId: 'intro',
+            href: 'https://hopnet24.wixsite.com/my-site-22',
+            label: 'The Essential AI',
             position: 'left',
-            label: 'Blog',
           },
           {
-            href: 'https://github.com/facebook/docusaurus',
+            href: 'mnist-4-neurons',
+            label: 'Our research',
+            position: 'left',
+          },
+          {
+            href: 'mnist-4-neurons',
+            label: 'Code',
+            position: 'left',
+          },
+          {
+            href: 'https://github.com/EssentialAI',
             label: 'GitHub',
             position: 'right',
           },
