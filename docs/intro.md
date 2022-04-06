@@ -5,7 +5,15 @@ title: The Essential AI blog
 slug: /
 ---
 
-The Essential AI was initially started as a blog. This section is a series of seemingly disconnected articles aimed at providing a mathematical intuition behind several Machine Learning models.
+Welcome to the The Essential AI blog. This section is a series of articles aimed at providing a mathematical intuition behind several Machine Learning models.
+
+## Why this blog?
+
+Several articles present online make Machine Learning a plug-and-play game without providing a mathematical comprehension. Articles at The Essential AI are aimed at addressing this issue.
+
+## Interacting with code in the cloud
+
+Every article comes with it's respective Google Colab notebook containing the code. The easiest way to access these notebooks is to use "Open in Colab" option in the navigation bar on the right hand side of every article.
 
 <div class = "pagination-nav__link1"><h1 class = 'markdown h2'><a href = "mnist-4-neurons">Can 4 output neurons classify 10 classes?</a></h1>
 

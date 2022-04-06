@@ -27,12 +27,12 @@ const sidebars = {
       items: ['mnist-4-neurons'],
     },
 
-    {
-      type: 'category',
-      label: 'Research',
-      collapsed: false,
-      items: ['momentum'],
-    },
+    // {
+    //   type: 'category',
+    //   label: 'Research',
+    //   collapsed: false,
+    //   items: ['momentum'],
+    // },
   ],
 };
 
