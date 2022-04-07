@@ -6,18 +6,22 @@ slug: mnist-4-neurons
 
 The first chapter of the <a href = "http://neuralnetworksanddeeplearning.com/chap1.html" target="_blank">"Neural Networks and Deep Learning"</a> book by Michael Nielsen teaches how to use neural networks to classify images in the MNIST dataset. While reading this chapter, a paragraph caught my eye.
 
-:::info [Source](http://neuralnetworksanddeeplearning.com/chap1.html)
+<!-- :::info [Source](http://neuralnetworksanddeeplearning.com/chap1.html) -->
+
+<div class = "container_FbJq backgroundPurplin_gjyc">
 
 "You might wonder why we use $10$ output neurons. After all, the goal of the network
 is to tell us which digit $(0,1,2,. . .,9)$ corresponds to the input image. A seemingly natural
-way of doing that is `to use just 4 output neurons, treating each neuron as taking on a binary
-value, depending on whether the neuron’s output is closer to 0 or to 1.` Four neurons are
+way of doing that is to use just 4 output neurons, treating each neuron as taking on a binary
+value, depending on whether the neuron’s output is closer to 0 or to 1. Four neurons are
 enough to encode the answer, since $2^4 = 16$ is more than the $10$ possible values for the input
 digit. Why should our network use $10$ neurons instead? Isn’t that inefficient?"
 
-:::
+</div>
 
-In this article we shall implement a neural network with just $4$ neurons to classify $10$ classes using the above idea. `Can sigmoid activation function perform multi-class classification?` Hold that thought.
+<p class = 'text-after-gradient'>
+
+In this article we shall implement a neural network with just $4$ neurons to classify $10$ classes using the above idea. `Can sigmoid activation function perform multi-class classification?` Hold that thought.</p>
 
 ## This article:
 
@@ -36,7 +40,8 @@ A perceptron takes in several inputs, $x_1, x_2,...,x_n$ and produces a single b
 
 <div align="center"><img align = "center" alt="Alt Text" src='/imgs/perceptron.svg'/></div> -->
 
-<div align="center"><img align = "center" alt="Alt Text" src={require('./imgs/perceptron.png').default} height = "280px" width = "260px"/></div>
+
+<div align="center"><img class = 'image-rounded' align = "center" alt="Alt Text" src={require('./imgs/perceptron1.png').default} height = "280px" width = "360px"/></div>
 
 <p class = 'figure_name'>Figure 1 : Perceptron</p>
 
@@ -63,10 +68,10 @@ $$
 $$
 
 $$
-\text{output from sigmoid} = \frac{1}{1+\text{exp}(-\sum_jw_jx_j - b)}
+\text{sigmoid output} = \frac{1}{1+\text{exp}(-\sum_jw_jx_j - b)}
 $$
 <br/>
-<div align="center"><img align = "center" alt="Alt Text" src={require('./imgs/sigmoid_step.png').default} height = "300px" width = "600px"/></div>
+<div align="center"><img align = "center" alt="Alt Text" src={require('./imgs/sigmoid_step1.png').default} height = "300px" width = "600px"/></div>
 <br/>
 
 The above image compares the sigmoid function with the Step function. Sigmoid is a smoothed version of step function. Step-function can be considered to represent the perceptron except for $x=0$.

@@ -23,6 +23,33 @@
   src: url('./fonts/Inter-italic-latin.var.woff2') format('woff2');
 }
 
+.container_FbJq {
+  background-repeat: no-repeat;
+  background-size: contain;
+  color: #fff;
+  display: block;
+  opacity: .95;
+  padding: 20px;
+  /* padding-bottom: 10px; */
+  border-radius: var(--ifm-global-radius);
+  /* border-radius: 2%; */
+}
+
+.text-after-gradient{
+  padding-top: 10px;
+}
+
+.backgroundLush_wd3z {
+  background-image: linear-gradient(139deg,#56ab2f,#a8e063);
+}
+
+p {
+  margin: 0 0 0;
+}
+
+.backgroundPurplin_gjyc {
+  background-image: linear-gradient(138deg,#4568dc,#b06ab3);
+}
 h1{
   font-size: 33px;
   font-weight: 600;
@@ -76,7 +103,7 @@ h3{
   border: 0;
   border-top: 1px solid #000000;
 } */
-
+.admonition admonition-info alert alert--info
 
 h4{
   font-size: 16px;
@@ -250,7 +277,9 @@ html[data-theme='dark'] .navbar-icon-github:before {
   height: 28px;
   width: 28px;
 }
-
+.image-rounded{
+  border-radius: 2%;
+}
 .navbar-icon-twitter:before {
   background-image: url('/img/icons8-twitter.svg');
 }
