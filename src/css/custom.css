@@ -75,7 +75,12 @@ h2{
 }
 
 .high {
-  color:#E83E8C;
+  color:#6565d5;
+  font-weight: bold;
+}
+.italic{
+  font-style: italic;
+  font-weight: normal;
 }
 .bhigh {
   color:#030F86;
@@ -104,6 +109,7 @@ h3{
   border-top: 1px solid #000000;
 } */
 .admonition admonition-info alert alert--info
+
 
 h4{
   font-size: 16px;
@@ -134,6 +140,14 @@ h4{
 
 
 .pagination-nav__link1 {
+  border: 2px solid var(--ifm-color-emphasis-300);
+  border-radius: var(--ifm-pagination-nav-border-radius);
+  flex-grow: 1;
+  padding: var(--ifm-global-spacing);
+  transition: border-color var(--ifm-transition-fast) var(--ifm-transition-timing-default);
+}
+
+.pagination-nav__link {
   border: 2px solid var(--ifm-color-emphasis-300);
   border-radius: var(--ifm-pagination-nav-border-radius);
   flex-grow: 1;
@@ -248,7 +262,6 @@ div[class^='announcementBar_'] {
 }
 
 .pagination-nav__item .pagination-nav__label {
-  font-size: 1.5rem;
 }
 
 .docs-doc-page .pagination-nav__item {

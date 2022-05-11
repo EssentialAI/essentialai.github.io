@@ -10,7 +10,7 @@ const katex = require('rehype-katex');
 const config = {
   title: 'The Essential AI',
   tagline: 'Learn AI, the Math way!',
-  url: 'https://blog.theessentialai.com/',
+  url: 'https://essentialai.github.io/',
   baseUrl: '/',
   onBrokenLinks: 'warn',
   onBrokenMarkdownLinks: 'warn',
@@ -127,6 +127,10 @@ const config = {
                 label: 'The Essential AI',
                 to: 'https://essentialai.org',
               },
+              {
+                label: 'Research at EssentialAI',
+                to: 'https://www.linkedin.com/in/nareshkumar1040/',
+              },
             ],
           },
           {
@@ -134,8 +138,13 @@ const config = {
             items: [
               {
                 label: 'Linkedin',
-                href: 'https://www.linkedin.com/in/nareshkumar1040/',
+                to: 'https://www.linkedin.com/in/nareshkumar1040/',
               },
+              {
+                label: 'Resume',
+                to: 'https://www.linkedin.com/in/nareshkumar1040/',
+              },
+              
             ],
           },
         ],

@@ -4,8 +4,8 @@
   <ShortName>The Essential AI</ShortName>
   <Description>Search The Essential AI</Description>
   <InputEncoding>UTF-8</InputEncoding>
-  <Image width="16" height="16" type="image/x-icon">https://blog.theessentialai.com/img/brain1.ico</Image>
-  <Url type="text/html" method="get" template="https://blog.theessentialai.com/search?q={searchTerms}"/>
-  <Url type="application/opensearchdescription+xml" rel="self" template="https://blog.theessentialai.com/opensearch.xml" />
-  <moz:SearchForm>https://blog.theessentialai.com/</moz:SearchForm>
+  <Image width="16" height="16" type="image/x-icon">https://essentialai.github.io/img/brain1.ico</Image>
+  <Url type="text/html" method="get" template="https://essentialai.github.io/search?q={searchTerms}"/>
+  <Url type="application/opensearchdescription+xml" rel="self" template="https://essentialai.github.io/opensearch.xml" />
+  <moz:SearchForm>https://essentialai.github.io/</moz:SearchForm>
 </OpenSearchDescription>

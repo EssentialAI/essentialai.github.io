@@ -5,11 +5,7 @@ title: The Essential AI blog
 slug: /
 ---
 
-Welcome to the The Essential AI blog. This section is a series of articles aimed at providing a mathematical intuition behind several Machine Learning models.
-
-## Why this blog?
-
-Several articles present online make Machine Learning a plug-and-play game without providing a mathematical comprehension. Articles at The Essential AI are aimed at addressing this issue.
+Welcome to the The Essential AI blog. This section is a series of articles aimed at providing a mathematical intuition behind several Machine Learning models. Several other online articles make Machine Learning a plug-and-play game without providing a mathematical comprehension. Articles at The Essential AI are aimed at addressing this issue.
 
 ## Interacting with code in the cloud
 
@@ -17,11 +13,20 @@ Every article comes with it's respective Google Colab notebook containing the co
 
 <div class = "pagination-nav__link1"><h1 class = 'markdown h2'><a href = "mnist-4-neurons">Can 4 output neurons classify 10 classes?</a></h1>
 
-March 28, 2022
-
-The answer is Yes! Wait a minute! Shouldn't there be as many output neurons as the number of classes for an image classification model? Actually No! We shall dive deep into this topic using mathematical reasoning. This article is a solution to an exercise in the "Neural networks and Deep Learning" book by Micheal Nielsen.
+For an image classification problem with <span class = 'high'>N</span> classes, it is a convention to use <span class = 'high'>N</span> neurons in the output layer of a neural network. However, this need not be the case. In his book <a href = "http://neuralnetworksanddeeplearning.com/chap1.html" target="_blank">Neural Networks and Deep Learning</a>, Micheal Nielsen, talks about classifying 10 classes using just 4 neurons. This article provides a mathematical intuition about the solution with a python implementation. 
 
 </div>
+
+<br/>
+
+<div class = "pagination-nav__link1"><h1 class = 'markdown h2'><a href = "taylor-approximation">Can Taylor series approximate any function?</a></h1>
+
+Work in progress
+
+</div>
+
+<br/>
+
 
 
 

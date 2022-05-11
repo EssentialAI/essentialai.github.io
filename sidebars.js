@@ -23,8 +23,20 @@ const sidebars = {
     {
       type: 'category',
       label: 'Articles',
+      collapsed: true,
+      items: ['mnist-4-neurons', 'taylor-approximation'],
+    },
+    {
+      type: 'category',
+      label: 'Reinforcement Learning',
+      collapsed: true,
+      items: ['RL_notes/rl_intro', 'RL_notes/mdp_intro'],
+    },
+    {
+      type: 'category',
+      label: "Explain ML to me like I'm 10",
       collapsed: false,
-      items: ['mnist-4-neurons'],
+      items: ['ML/linear-regression'],
     },
 
     // {
