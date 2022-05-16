@@ -28,13 +28,7 @@ const sidebars = {
     },
     {
       type: 'category',
-      label: 'Reinforcement Learning',
-      collapsed: true,
-      items: ['RL_notes/rl_intro', 'RL_notes/mdp_intro'],
-    },
-    {
-      type: 'category',
-      label: "Explain ML to me like I'm 10",
+      label: "Explain Machine Learning like I'm 10",
       collapsed: false,
       items: ['ML/linear-regression'],
     },
