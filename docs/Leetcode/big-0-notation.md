@@ -45,4 +45,17 @@ Better code:
 * Takes less space (memory)
 
 ### Time
-Let's discuss how we measure the time taken by our code. We have to come up with a measure that depends on the code itself and not on the hardware on which the code is run.
+Let's discuss how we measure the time taken by our code. We have to come up with a measure that depends on the code itself and not on the hardware on which the code is run. One way to measure this time is to count the number of operations in the code.
+
+<div align="center"><img class = 'image-rounded' align = "center" alt="Alt Text" src={require('../imgs/leetcode/img1.png').default} width = "520px"/></div>
+
+<br/>
+
+Consider code 2 above. We have a total of 5 operations here. These operations are not dependent on the length of the array. Even if the length of the array is 1 million, we still have the same 5 operations. This means that this code has a time complexity of $O(1)$.
+
+Let's now look at Code 1. In this code, we still want to find the sum of elements in an array, but the code is quite different. We have a `for` loop that traverses through the length of the array and adds values at each iteration to variable named `sum`.
+
+<div align="center"><img class = 'image-rounded' align = "center" alt="Alt Text" src={require('../imgs/leetcode/img2.png').default} width = "520px"/></div>
+
+<br/>
+
