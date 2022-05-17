@@ -22,15 +22,28 @@ const sidebars = {
     "intro",
     {
       type: 'category',
-      label: 'Articles',
+      label: 'Essential AI articles',
       collapsed: true,
       items: ['mnist-4-neurons', 'taylor-approximation'],
     },
     {
       type: 'category',
       label: "Explain Machine Learning like I'm 10",
-      collapsed: false,
+      collapsed: true,
       items: ['ML/linear-regression'],
+    },
+    {
+      type: 'category',
+      label: "My Leetcode Experience",
+      collapsed: false,
+      items: ['Leetcode/l_intro', 'Leetcode/l_big-o-notation'],
+    },
+
+    {
+      type: 'category',
+      label: "How To Get Into It?",
+      collapsed: true,
+      items: ['HTGIT/h_intro'],
     },
 
     // {

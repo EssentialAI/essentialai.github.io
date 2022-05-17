@@ -73,7 +73,10 @@ h2{
   /* font-weight: bold; */
   /* text-shadow: 2px 2px #83c5be; */
 }
-
+.right{
+  text-align: right;
+  font-style: italic;
+}
 .high {
   color:#6565d5;
   font-weight: bold;
