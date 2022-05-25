@@ -34,17 +34,22 @@ const sidebars = {
     },
     {
       type: 'category',
-      label: "My Leetcode Experience",
+      label: "My DS Algo Experience",
       collapsed: false,
-      items: ['Leetcode/l_intro', 'Leetcode/l_big-o-notation'],
+      items: ['ds-algo/l_intro'],
     },
 
-    {
-      type: 'category',
-      label: "How To Get Into It?",
-      collapsed: true,
-      items: ['HTGIT/h_intro'],
-    },
+    // {
+    //   type: 'category',
+    //   label: "Data Science journey",
+    //   collapsed: true,
+    //   items: [{
+    //     type: 'category',
+    //     label: "SQL",
+    //     collapsed: false,
+    //     items: ['SQL/s_intro','SQL/s_installation'],
+    //   }],
+    // },
 
     // {
     //   type: 'category',

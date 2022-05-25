@@ -5,7 +5,7 @@ slug: linear-regression
 ---
 Linear Regression is considered to be one of the most basic Machine Learning algorithms. In fact, it is taught as a high school exercise by the name, "Finding the line of best fit". Yet, many fail to appreciate the mathematical reasoning behind the algorithm. In this article, we shall explore various ways to understand Linear Regression intuitively.
 
-## Linear Regression Explained.
+## Linear Regression Explained
 
 *To understand what Linear Regression is, let's take a step back and discuss a high school exercise.*
 
