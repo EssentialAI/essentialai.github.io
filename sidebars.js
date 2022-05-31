@@ -26,17 +26,28 @@ const sidebars = {
       collapsed: true,
       items: ['mnist-4-neurons', 'taylor-approximation'],
     },
-    {
-      type: 'category',
-      label: "Explain Machine Learning like I'm 10",
-      collapsed: true,
-      items: ['ML/linear-regression'],
-    },
+    // {
+    //   type: 'category',
+    //   label: "Explain Machine Learning like I'm 10",
+    //   collapsed: true,
+    //   items: ['ML/linear-regression'],
+    // },
     {
       type: 'category',
       label: "My DS Algo Experience",
       collapsed: false,
       items: ['ds-algo/l_intro'],
+    },
+    {
+      type: 'category',
+      label: "Data Science Experience",
+      collapsed: true,
+      items: ["data-science",{
+        type: 'category',
+        label: "Machine learning Zoomcamp",
+        collapsed: true,
+        items: ['ML_zoomcamp/zoomcamp_intro'],
+      }],
     },
 
     // {

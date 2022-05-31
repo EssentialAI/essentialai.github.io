@@ -120,3 +120,12 @@ Function SumUpTo(arr):
 <div align="center"><img class = 'image-rounded' align = "center" alt="Alt Text" src={require('../imgs/leetcode/img4.png').default} width = "520px"/></div>
 
 <br/>
+
+Let's see another example.
+
+```javascript
+Function getArrUpto(n):
+    arr = []
+    Loop as i from (0,n):
+        arr.add(i)
+            

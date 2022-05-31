@@ -1,6 +1,6 @@
 ---
 id: l_intro
-title: DS Algo section Introduction
+title: Introduction
 slug: intro
 ---
 
