@@ -16,7 +16,7 @@ Hi! I am Naresh Kumar Devulapally, Data Scientist - II at Carbynetech India Pvt.
 
 ## Work Experience
 
-<div><span class = 'high'>Data Scientist-II, Carbynetech India Pvt. Ltd.</span><span class = 'right1'>July 2016 - July 2020</span></div>
+<div><span class = 'high'>Data Scientist-II, Carbynetech India Pvt. Ltd.</span></div>
 
 #### 1. Custom Object detection model for PID symbol detection using GANs, YOLO v4, detectron2.
 
