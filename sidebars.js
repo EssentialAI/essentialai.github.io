@@ -20,27 +20,29 @@ const sidebars = {
   
   tutorialSidebar: [
     "intro",
+    "about",
     {
       type: 'category',
-      label: 'Essential AI articles',
+      label: 'Essential AI blog',
       collapsed: true,
       items: ['mnist-4-neurons', 'taylor-approximation'],
     },
+
+    {
+      type: 'category',
+      label: "Machine Learning Explained",
+      collapsed: false,
+      items: ['ML/linear-regression'],
+    },
     // {
     //   type: 'category',
-    //   label: "Explain Machine Learning like I'm 10",
-    //   collapsed: true,
-    //   items: ['ML/linear-regression'],
+    //   label: "My DS Algo Experience",
+    //   collapsed: false,
+    //   items: ['ds-algo/l_intro'],
     // },
     {
       type: 'category',
-      label: "My DS Algo Experience",
-      collapsed: false,
-      items: ['ds-algo/l_intro'],
-    },
-    {
-      type: 'category',
-      label: "Data Science Experience",
+      label: "My Data Science Notes",
       collapsed: true,
       items: ["data-science",{
         type: 'category',

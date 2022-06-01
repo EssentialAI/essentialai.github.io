@@ -82,7 +82,7 @@ const config = {
         //... other Algolia params
       },
       navbar: {
-        title: 'The Essential AI blog',
+        title: 'The Essential AI',
         
         // logo: {
         //   alt: 'My Site Logo',
@@ -95,16 +95,16 @@ const config = {
           //   position: 'left',
           //   label: ' ',
           // },
-          {
-            href: 'https://essentialai.org',
-            label: 'The Essential AI',
-            position: 'left',
-          },
-          {
-            href: 'momentum',
-            label: 'Our research',
-            position: 'left',
-          },
+          // {
+          //   href: 'https://essentialai.org',
+          //   label: 'The Essential AI',
+          //   position: 'left',
+          // },
+          // {
+          //   href: 'momentum',
+          //   label: 'Our research',
+          //   position: 'left',
+          // },
           {
             href: 'https://github.com/EssentialAI',
             label: 'Code',

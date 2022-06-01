@@ -77,6 +77,10 @@ h2{
   text-align: right;
   font-style: italic;
 }
+.right1{
+  float: right;
+  font-style: italic;
+}
 .high {
   color:#6565d5;
   font-weight: bold;
