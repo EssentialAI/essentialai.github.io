@@ -4,6 +4,9 @@ id: intro
 title: The Essential AI
 slug: /
 ---
+<div align="center"><img class = 'image-rounded' align = "center" alt="Alt Text" src={require('/docs/imgs/tea.png').default} width = "200px"/></div>
+
+<br/>
 
 Welcome to the The Essential AI blog. This section is a series of articles aimed at providing a mathematical intuition behind several Machine Learning models. Several other online articles make Machine Learning a plug-and-play game without providing a mathematical comprehension. Articles at The Essential AI are aimed at addressing this issue.
 

@@ -4,7 +4,7 @@ title: Can 4 output neurons classify 10 classes?
 slug: mnist-4-neurons
 ---
 
-## [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/googlecolab/colabtools/blob/master/notebooks/colab-github-demo.ipynb)
+## [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1OhKAgeefcpjpZ8fdGbgWn7_lpIbCHS5i?usp=sharing)
 
 The first chapter of the <a href = "http://neuralnetworksanddeeplearning.com/chap1.html" target="_blank">"Neural Networks and Deep Learning"</a> book by Michael Nielsen teaches how to use neural networks to classify images in the MNIST dataset. While reading this chapter, a paragraph caught my eye.
 
@@ -419,4 +419,4 @@ plt.show()
 
 ## Summary
 
-To finish summary
+This article dives deep into the question, "Can 4 output neurons classify 10 classes?". The implementation of the idea is clearly discussion and reasons for performance measures are discussed. The aim of this article is to provide an out-of-the-box solution to a seemingly non-intuitive problem statement.

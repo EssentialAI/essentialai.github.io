@@ -5,7 +5,7 @@ title: About Me
 slug: about
 ---
 
-<div align="center"><img class = 'image-rounded' align = "center" alt="Alt Text" src={require('/docs/imgs/about.png').default} width = "260px"/></div>
+<div align="center"><img class = 'image-rounded' align = "center" alt="Alt Text" src={require('/docs/imgs/about.png').default} width = "220px"/></div>
 
 <br/>
 
