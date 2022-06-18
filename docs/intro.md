@@ -8,20 +8,23 @@ slug: /
 
 <br/>
 
-Welcome to the The Essential AI blog. This section is a series of articles aimed at providing a mathematical intuition behind several Machine Learning models. Several other online articles make Machine Learning a plug-and-play game without providing a mathematical comprehension. Articles at The Essential AI are aimed at addressing this issue.
+Welcome to The Essential AI blog. This section is a series of articles aimed at providing a mathematical intuition behind several Machine Learning algorithms. Many online articles make Machine Learning a plug-and-play game without providing a mathematical comprehension. Articles at The Essential AI are aimed at addressing this issue.
 
 ## How to navigate through The Essential AI?
 
-### **1. The Essential AI blog**
+### 1. The Essential AI blog
 
-This section contains articles that dive deep into a specific topic of Machine Learning. Each article contains link to the corresponding <a href = 'https://github.com/EssentialAI' target="_blank">GitHub code</a>. The easiest way to access these notebooks is to use <span class= 'high'>"Open in Colab"</span> option in the navigation bar on the right hand side of every article.The aim of these articles is to simply concepts in AI using mathematical intuition.
+This section contains articles that dive deep into a specific topic of Machine Learning. Each article contains link to the corresponding <a href = 'https://github.com/EssentialAI' target="_blank">GitHub code</a>. The easiest way to access these notebooks is to use <span align="center"><img class = 'image-rounded' align = "center" alt="Alt Text" src={require('./imgs/colab1.png').default} width = "30px"/></span> option to open the code in <span class = 'high'>Google Colab</span> available in every article. The aim of these articles is to simply concepts in AI using mathematical intuition.
 
-### **2. Machine Learning Explained**
+### 2. Machine Learning Explained
 
-These sections comprise the _Machine Learning Explained_ Course, which seeks to explain all of Machine Learning's concepts from the ground up. The following sections, My Data Science notes and My Leetcode experience, contain class notes and my attempts to learn the concepts.
+These sections comprise the Machine Learning Explained Course, which seeks to explain all of Machine Learning's concepts from the ground up. The mathematical intuition behind every Machine Learning model is clearly explained, in layman's terms. Chapters discuss multiple ways of solving each machine learning algorithms.
 
+### 3. My Data Science Notes
 
+This section contains class notes from the lecture videos I have used to understand Machine Learning and Data Science. This section is currently in progress and more content will be added soon.
 
+Checkout more details about me in the [About](about.md) page
 <!-- <div class = "pagination-nav__link1"><h1 class = 'markdown h2'><a href = "mnist-4-neurons">Can 4 output neurons classify 10 classes?</a></h1>
 
 For an image classification problem with <span class = 'high'>N</span> classes, it is a convention to use <span class = 'high'>N</span> neurons in the output layer of a neural network. However, this need not be the case. In his book <a href = "http://neuralnetworksanddeeplearning.com/chap1.html" target="_blank">Neural Networks and Deep Learning</a>, Micheal Nielsen, talks about classifying 10 classes using just 4 neurons. This article provides a mathematical intuition about the solution with a python implementation. 

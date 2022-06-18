@@ -85,6 +85,12 @@ h2{
   color:#6565d5;
   font-weight: bold;
 }
+.date{
+  text-align: left;
+  color:#6565d5;
+  font-weight: bold;
+  font-style: italic;
+}
 .italic{
   font-style: italic;
   font-weight: normal;

@@ -125,11 +125,11 @@ const config = {
             items: [
               {
                 label: 'The Essential AI',
-                to: 'https://essentialai.org',
+                to: 'https://essentialai.github.io',
               },
               {
-                label: 'Research at EssentialAI',
-                to: 'https://www.linkedin.com/in/nareshkumar1040/',
+                label: 'Research at EssentialAI (WIP)',
+                to: 'https://essentialai.github.io',
               },
             ],
           },

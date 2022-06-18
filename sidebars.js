@@ -44,7 +44,7 @@ const sidebars = {
       type: 'category',
       label: "My Data Science Notes",
       collapsed: true,
-      items: ["data-science",{
+      items: [{
         type: 'category',
         label: "Machine learning Zoomcamp",
         collapsed: true,
