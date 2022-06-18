@@ -5,7 +5,7 @@ slug: linear-regression
 ---
 Linear Regression is considered to be one of the most basic Machine Learning algorithms. In fact, it is taught as a high school exercise by the name, "Finding the line of best fit". Yet, many fail to appreciate the mathematical reasoning behind the algorithm. In this article, we shall explore various ways to understand Linear Regression intuitively.
 
-## Linear Regression Explained
+## Linear Regression Intuition
 
 *To understand what Linear Regression is, let's take a step back and discuss a high school exercise.*
 
@@ -35,7 +35,7 @@ $$
 \large{\hat{y_i} = ax_i+b}
 $$
 
-### Metrics to find the best-fit line
+### Error function defined
 One intuitive metric for any solution is <span class = 'italic'>minimizing the error</span>. In our case, we would like the line to pass through all the data points in an ideal scenario. However, there will be a few points that do not fall on the line as shown below. How do we formalize this error between the actual data points and the line?
 
 <br/>
@@ -60,7 +60,7 @@ $$
 
 <br/>
 
-## Naive approach to solve 1-D Linear Regression
+## Naive approach to minimize the error function in 1-D Linear Regression
 
 A naive approach towards solving the Linear Regression problem would be to derivate the loss function and equate it to zero to find the values of a and b. Note that we are given the data points, $\{(x_1, y_1), (x_2, y_2), (x_3, y_3),...,(x_n, y_n)\}$ and $a$, $b$ are the variables.
 
@@ -99,6 +99,83 @@ a = \frac{\bar{xy}-\bar{x}\bar{y}}{\bar{x^2}-\bar{x}^2},\enspace b =
       \frac{\bar{y}\bar{x^2}-\bar{x}.\bar{xy}}{\bar{x^2}-\bar{x}^2}
 $$
 
+### Code for the above implementation
+
+We have found the formulae for the slope and intercept of the <span class ='high'>Line of best fit</span> for the given data points. Let's code this solution in python.
+
+```python
+def solve_and_fit(self, data)
+    denominator=self.X.dot(self.X) - self.X.mean()**2
+    m = (self.X.dot(self.Y)-self.X.mean()*self.Y.mean())/denominator
+    b = (self.X.dot(self.X)*self.Y.mean()-self.X.mean()*self.X.dot(self.Y))/denominator
+    self.Yhat = m*self.X+b
+    plt.plot(self.X, self.Yhat, color ="red", label = "Best fit line")
+```
+
 ### Validating how good the line fits on the data
 
-Using a nai
+Using a naive calculus approach, we do have a solution for the line. However, we need a numerical measure to determine how good the fit is. To do this we use $R^2$.
+
+#### $R^2$ score explained
+
+To recollect, we are given the task of coming up with the line of best fit that represents the relation between dependent and independent variables. To do this, we have formulated a loss (error) function that represents the measure of error obtained, given a line with slope a and b. Finally, we used calculus to find the values of a and b where this loss function is minimum.
+
+**This loss function is also known as the <span class = 'high'>Sum of Squared Residuals</span> $(SS_{Res})$.**
+
+The definition for $R^2$ is given as:
+
+$$
+\begin{align}
+R^2 = 1 - \frac{SS_{Res}}{SS_{Total}}
+\end{align}
+$$
+
+In the above equation, $SS_{Total}$ is defined as:
+
+$$
+SS_{Total} = \sum_{i=1}^{N}(y_{i}-\bar{y})^2
+$$
+
+$
+\color{royalblue}
+{\bar{y} = \text{mean}(y)}
+$
+
+### Inferences
+* $R^2=1$ means $SS_{Res} = 0$. This means the error is 0. This represents the best fit.
+* $R^2=0$ means $SS_{Res}=SS_{Total}$. This indicates that the model is predicting $\bar y$ almost always.
+* $R^2 < 0 \enspace (-ve)$ means $SS_{Res}>SS_{Total}$. This indicates that the model is pretty worse and needs immediate action.
+
+## Consolidated code with $R^2$ and comparison with Sklearn's module
+
+```python
+def solve_and_fit(self, data)
+    denominator=self.X.dot(self.X) - self.X.mean()**2
+    m = (self.X.dot(self.Y)-self.X.mean()*self.Y.mean())/denominator
+    b = (self.X.dot(self.X)*self.Y.mean()-self.X.mean()*self.X.dot(self.Y))/denominator
+    self.Yhat = m*self.X+b
+    plt.plot(self.X, self.Yhat, color ="red", label = "Best fit line")
+
+def r_square(self)
+    d1 = self.Y-self.Yhat
+    d2 = self.Y-self.Y.mean()
+    print("R-squared value is", 1-(d1.dot(d1)/d2.dot(d2)))
+
+def sklearn_model(self)
+    model = LinearRegression()
+    model.fit(self.X, self.Y)
+    print("Sklearn model score is", model.score(self.X, self.Y))
+    print("Sklearn model weights", model.coef_)
+    print("Sklearn model intercept", model.intercept_)
+```
+
+```code
+Slope is 0.51 and Intercept is -0.01
+R-squared value is 0.9576039060788152
+Sklearn model score is 0.9576039802687464
+Sklearn model weights [[0.50907253]]
+Sklearn model Intercept [-0.00820514]
+```
+The above code compares the performance of the widely used [Sklearn's Linear Regression module](https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LinearRegression.html) using the $R^2$ metric defined above. It is clearly be clearly seen that the model code from scratch performs exactly same as compared to the sklearn's model.
+
+_<span class = 'citalic'>Note:</span> Concepts including Gradient Descent and Multiple Regression are intentionally not included in this article for simplicity. This article presents the intuition behing Linear Regression and an insight that Machine Learning/Gradient Descent need not always be used to solve simple problems like Linear Regression._

@@ -125,11 +125,11 @@ const config = {
             items: [
               {
                 label: 'The Essential AI',
-                to: 'https://essentialai.github.io',
+                href: '/',
               },
               {
                 label: 'Research at EssentialAI (WIP)',
-                to: 'https://essentialai.github.io',
+                href: '/',
               },
             ],
           },
@@ -141,8 +141,8 @@ const config = {
                 to: 'https://www.linkedin.com/in/nareshkumar1040/',
               },
               {
-                label: 'Resume',
-                to: 'https://www.linkedin.com/in/nareshkumar1040/',
+                label: 'Resume (LaTeX)',
+                to: 'https://drive.google.com/file/d/1Tr3uto3iaG9Px7bMzfdWSPdGpx-Vytzo/view?usp=sharing',
               },
               
             ],

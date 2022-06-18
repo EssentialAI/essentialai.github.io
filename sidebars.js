@@ -25,7 +25,7 @@ const sidebars = {
       type: 'category',
       label: 'Essential AI blog',
       collapsed: true,
-      items: ['mnist-4-neurons', 'taylor-approximation'],
+      items: ['mnist-4-neurons'],
     },
 
     {

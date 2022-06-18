@@ -33,7 +33,7 @@ In this article we shall implement a neural network with just $4$ neurons to cla
 1. Implements 4-neuron image classification model for MNIST dataset.
 2. Provides reasons for difference in performance of above model and the baseline 10 neuron model.
 3. Extends the implementation of 4-neuron model to 16 classes.
-4. Explains reasons, possible heuristics for difference in performances.
+4. Explains reasons, possible heuristics for differences in performance.
 
 ## Introduction
 Our goal here is to perform Image Classification on the MNIST dataset using a neural network. Before proceeding to the code, this section discusses how neural networks learn.
@@ -100,6 +100,7 @@ Softmax activation function comes into picture usually in the case of multi-clas
 In the case of sigmoid it is interpreted that the likelihood of a class occuring in image is proportional to the value of sigmoid function but not exactly equal to the output. This leads to the fact that softmax activation function uses categorical cross-entropy loss with equal number of neurons as the number of classes.
 
 ## Encoding image labels:
+
 **This section is the core component of this article.**
 
 Using binary cross-entropy loss and Sigmoid activation function gives us an output between $0$ and $1$. If $4$  such neurons are placed in the output layer of a neural network, the network yields $2$ possible outputs for every neuron. Hence we shall have $2^4 = 16$ outputs, which are more than sufficient to classify $10$ classes.

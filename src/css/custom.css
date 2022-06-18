@@ -85,6 +85,11 @@ h2{
   color:#6565d5;
   font-weight: bold;
 }
+
+.underline{
+  text-decoration: underline;
+}
+
 .date{
   text-align: left;
   color:#6565d5;
@@ -95,6 +100,13 @@ h2{
   font-style: italic;
   font-weight: normal;
 }
+
+.citalic{
+  font-style: italic;
+  font-weight: normal;
+  color:#6565d5;
+}
+
 .bhigh {
   color:#030F86;
 }

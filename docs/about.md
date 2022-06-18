@@ -9,7 +9,7 @@ slug: about
 
 <br/>
 
-Hi! I am Naresh Kumar Devulapally, Data Scientist - II at Carbynetech India Pvt. Ltd. My research interests include Computer Vision and Natural Language Processing. I am very interested in the field of **Vision-Language AI models.**
+Hi! I am Naresh Kumar Devulapally, Data Scientist-II at Carbynetech India Pvt. Ltd. My research interests include Computer Vision and Natural Language Processing. I am very interested in the field of **Vision-Language AI models.**
 
 ----
 
