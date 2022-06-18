@@ -4,6 +4,8 @@ title: Machine Learning Zoomcamp Introduction
 slug: intro
 ---
 
+<p class = 'citalic'>This page is in progress</p>
+
 This zoomcamp teaches the basics of Machine Learning while extending the teachings to model deployment and monitoring. `More introduction to be added here.`
 
 ## Course Plan
