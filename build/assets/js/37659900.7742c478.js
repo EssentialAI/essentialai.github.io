@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkmy_website=self.webpackChunkmy_website||[]).push([[783],{9526:function(a){a.exports=JSON.parse('{"name":"array-easy","permalink":"/tags/array-easy","docs":[{"id":"ds-algo/arrays-easy","title":"Arrays Part-1","description":"","permalink":"/ds-algo/arrays-easy"}],"allTagsPath":"/tags"}')}}]);

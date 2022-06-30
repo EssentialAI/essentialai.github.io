@@ -88,7 +88,7 @@ $$
 
 $$
 \color{royalblue}{
-\text{we have, }
+\text{Here,}
 \sum_{i=1}^Nx_i^2 = \bar{x^2}, \enspace \sum_{i=1}^Nx_i = \bar{x}, \enspace \sum_{i=1}^Nx_iy_i = \bar{xy}}
 $$
 

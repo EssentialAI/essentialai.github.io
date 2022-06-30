@@ -116,6 +116,7 @@ h2{
 
 .nlinks{
   text-decoration: none;
+  color:#6565d5;
 }
 
 h3{
@@ -161,6 +162,14 @@ h4{
 
 .bold{
   font-weight: bold;
+}
+
+.border{
+  border: 2px solid var(--ifm-color-emphasis-300);
+  border-radius: var(--ifm-pagination-nav-border-radius);
+  /* flex-grow: 1; */
+  padding: var(--ifm-global-spacing);
+  /* transition: border-color var(--ifm-transition-fast) var(--ifm-transition-timing-default); */
 }
 
 

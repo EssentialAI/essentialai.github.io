@@ -24,14 +24,14 @@ const sidebars = {
     {
       type: 'category',
       label: 'Essential AI blog',
-      collapsed: true,
+      collapsed: false,
       items: ['mnist-4-neurons'],
     },
 
     {
       type: 'category',
       label: "Machine Learning Explained",
-      collapsed: false,
+      collapsed: true,
       items: ['ML/linear-regression'],
     },
     // {
@@ -48,8 +48,14 @@ const sidebars = {
         type: 'category',
         label: "Machine learning Zoomcamp",
         collapsed: true,
-        items: ['ML_zoomcamp/zoomcamp_intro'],
+        items: ['ML_zoomcamp/zoomcamp_intro', 'ML_zoomcamp/supervised-ml'],
       }],
+    },
+    {
+      type: 'category',
+      label: 'DS Algos',
+      collapsed: true,
+      items: ['ds-algo/l_intro', 'ds-algo/arrays-easy'],
     },
 
     // {

@@ -4,9 +4,7 @@ title: Machine Learning Zoomcamp Introduction
 slug: intro
 ---
 
-<p class = 'citalic'>This page is in progress</p>
-
-This zoomcamp teaches the basics of Machine Learning while extending the teachings to model deployment and monitoring. `More introduction to be added here.`
+This zoomcamp teaches the basics of Machine Learning while extending the teachings to model deployment and monitoring. This section is my personal notes from the lecture series in [youtube](https://www.youtube.com/watch?v=rowoDjPc8HU&list=PL3MmuxUbc_hIhxl5Ji8t4O6lPAOpHaCLR&index=1). These notes are made as simple as possible, while capturing the entire essence of ML Zoomcamp.
 
 ## Course Plan
 
@@ -51,6 +49,14 @@ def detect_spam(email):
     else:
         return GOOD
 ```
-One can see the caveat of the above approach. Several spam messages can easily circumvent these words and reach user's inboxes. Additionally, maintaining a list of all the possible "spam words" is not a feasible solution. Moreover, the system would incorrectly classify many genuine mails as spam just because the mails use the first in the list of "spam words". This becomes a never-ending process.
+One can see the caveat of the above approach. Several spam messages can easily circumvent these words and reach user's inboxes. Additionally, maintaining a list of all the possible "spam words" is not a feasible solution. Moreover, the system would incorrectly classify many genuine mails as spam just because the mails use a word in the list of "spam words". This becomes a never-ending process.
 
 We can use Machine Learning to solve this problem. We can get the previous data of spam and non-spam mails, and we can train an ML model to learn the patterns in these emails. We can then use this model to predict whether a given mail is spam/non-spam. In this case, the model itself will come up with rules that would make a given mail spam/non-spam.
+
+### Features explained
+
+For the above explained spam detection ML model, features can be as simple as the "Length of the title", "Length of the body", "Sender email id" and so on. <span class = 'citalic'>In short, features are the important, independent attributes that the (ML) models use to determine their (model's) prediction.</span>
+
+To summarize, in rule-based system, we input the rules and data (without output labels) to the system and use these rules to predict the output. In the case of Machine Learning approach, we just provide the data (with output labels) and expect the software to come up with a model that learns the rules on it's own and provides predictions for any future data points.
+
+_This article describes the course plan for the Machine Learning zoomcamp and a high-level introduction to Machine Learning while talking about differences between ML and rule-based approaches._
