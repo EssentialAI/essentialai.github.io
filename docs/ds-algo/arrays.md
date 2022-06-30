@@ -261,39 +261,54 @@ Output: [1,5,1]
 
   </TabItem>
   <TabItem value="orange" label="Intuition">
-  The important thing this about the solution is <span class = 'high'>Factorial</span>.
-
-  First define the factorial function (using recursion) to find all the values required for the triangle. Then use it to find all the values. Remember the fact that the row number and the length of values in a row are same.
-
-  The values required for the $n^{\text{th}}$ row are:
   
-  $\binom{n}{0}$, $\binom{n}{1}$, $\binom{n}{2}$,...,$\binom{n}{n}$
+We shall use [1,3,5,4,2] as the working example.
+
+  The steps to solve the problem are:
+
+  1. Traverse the array from behind and find the index of the first element where `arr[i] < arr[i+1]` (i=1).
+  2. Traverse the array from behind again and find the index of the first element that is greater than `arr[i]` (j=3).
+  3. Swap the elements at `i` and `j`. (1 and 3). This gives `[1,4,5,3,2]`.
+  4. Reverse the array from `i+1` to the end. This gives `[1,4,2,3,5]`. This is the answer.
+
+Edge case: There is no element that satisfies the first condition. This means the given permutation is the last one that can be formed using the numbers in the list. So the answer would be just the reverse of the input array.
+
 
   </TabItem>
   <TabItem value="banana" label="Code">
 
-<h3 class = 'padd'>Code for the factorial approach:</h3>
+<h3 class = 'padd'>Code for the Optimized approach:</h3>
 
 ```python
 class Solution:
-    def generate(self, numRows: int) -> List[List[int]]:
+    def nextPermutation(self, nums: List[int]) -> None:
+        """
+        Do not return anything, modify nums in-place instead.
+        """
         
-        final = []
-        
-        def factorial(n):
-            if n==0:
-                return 1
-            else:
-                return n*factorial(n-1)
-            
-        for i in range(numRows):
-            test = []
-            for j in range(i+1):
-                test.append(int((factorial(i))/(factorial(i-j)*factorial(j))))
-            if len(test)!=0:
-                final.append(test)
-                            
-        return final
+        first = "Naresh"
+        second = "Kumar"
+
+        for i in range(len(nums)-2, -1, -1):
+            if nums[i]<nums[i+1]:
+                first = i
+                break
+
+        #print(first)
+
+        if first=="Naresh":
+            nums[:] = reversed(nums[:])
+            return nums
+
+        for i in range(len(nums)-1, -1, -1):
+            if nums[first]<nums[i]:
+                second = i
+                break
+
+        #print(second)
+
+        nums[first], nums[second] = nums[second], nums[first]
+        nums[first+1:] = reversed(nums[first+1:])
 ```
   </TabItem>
 </Tabs>
