@@ -148,6 +148,17 @@ h4{
   /* text-shadow: 2px 2px #83c5be; */
 }
 
+.padd{
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+
+.cpadd{
+  padding-top: 12px;
+  padding-bottom: 12px;
+  color: #6565d5;
+}
+
 .figure_name{
   font-size: 13px;
   /* font-family: Inter; */

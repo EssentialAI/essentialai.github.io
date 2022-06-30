@@ -13,7 +13,9 @@ I made sure to note the intuition behind the code along with the code itself in 
 
 <p class = 'high'>This page is not a lecture series. It is just a place where I document my DS Algo code for my own reference</p>
 
-<details>
+## Table of contents
+
+<!-- <details>
 <summary>Summary text.</summary>
 
 ```python
@@ -28,4 +30,4 @@ from keras.utils import np_utils
 from sklearn.utils import shuffle
 ```
 
-</details>
+</details> -->

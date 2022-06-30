@@ -1,9 +1,9 @@
 ---
-id: arrays-easy
+id: arrays1
 title: Arrays Part-1
 tags:
   - array-easy
-slug: arrays-easy
+slug: arrays1
 ---
 
 import Tabs from '@theme/Tabs';
@@ -51,7 +51,46 @@ Output: [[0,0,0,0],[0,4,5,0],[0,3,1,0]]
 
   </TabItem>
   <TabItem value="orange" label="Intuition">
-  Write a code to find all the zeros in a matrix and set its corresponding row and column to zero.
+  <span class = 'citalic'>Question:</span> Find all 0s in the matrix (for example i=1, j=1, i-> rows, j-> colums), then replace all the values in the row i and column j with 0s.
+
+  <h2 class = 'cpadd'>Intuition 1:</h2>
+
+  The initial question to the interviewer must be what will be the range of values present in the matrix. This is required because we are going to replace the 0s in the matrix with a number/string that is not present in the matrix.
+
+  <h3 class = 'padd'>Brute force approach:</h3>
+
+  1. Traverse through all the elements in the matrix and find places where there are zeros. $O(M \times N)$
+  2. Then traverse through rows/columns (one pass) and replace the non-zeros in the respective row/column to a string/number. (Example: "kumar", or -1)
+  3. Fianlly, traverse through the array again and replace these string/number ("kumar" or -1) with zeros.
+
+Total time complexity of this approach will be: O((rows $\times$ columns)$\times$(rows $+$ columns)). i.e., $O(M \times N)\times O(M+N)$
+
+Space complexity is $O(1)$ as we are changing the values in place and not creating any other matrix.
+  
+  <h2 class = 'cpadd'>Intuition 2:</h2>
+
+  <h3 class = 'padd'>Optimized approach 1:</h3>
+
+  Take two dummy arrays one with length same as number of rows and another with length as number of columns. We shall use these arrays to represent which rows or columns must be set to 0.
+
+  1. Traverse through the matrix, whenever you find a 0 in the matrix, simply set 0 in the row array at row index and column array at column index.
+  2. Finally, traverse the matrix one last time and at every index, check the index at both row array and column array.
+  3. If any one of the index has the value zero, set the value in the matrix to 0.
+
+Total time complexity of this approach will be: O((rows $\times$ columns) $+$ (rows $\times$ columns)). i.e., $O(M \times N)+ O(M \times N)$
+
+Space complexity is $O(M) + O(N)$ as we have initialized two dummy arrays of lengths M and N.
+
+  <h3 class = 'padd'>Optimized approach 2:</h3>
+
+  In this approach, instead of taking two dummy arrays, we consider the first row and the first column of the given matrix as dummy arrays.
+
+  _One important detail is that the first element is in both first row and column and this must be taken care of._
+
+Total time complexity of this approach will be: O((rows $\times$ columns) $+$ (rows $\times$ columns)). i.e., $O(M \times N)+ O(M \times N)$
+
+Space complexity is $O(1)$ as we are changing the values in place and not creating any other matrix.
+
   </TabItem>
   <TabItem value="banana" label="Code">
 

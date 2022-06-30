@@ -55,7 +55,7 @@ const sidebars = {
       type: 'category',
       label: 'DS Algos',
       collapsed: true,
-      items: ['ds-algo/l_intro', 'ds-algo/arrays-easy'],
+      items: ['ds-algo/l_intro', 'ds-algo/arrays1'],
     },
 
     // {
