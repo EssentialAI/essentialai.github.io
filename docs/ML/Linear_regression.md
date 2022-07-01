@@ -176,6 +176,6 @@ Sklearn model score is 0.9576039802687464
 Sklearn model weights [[0.50907253]]
 Sklearn model Intercept [-0.00820514]
 ```
-The above code compares the performance of the widely used [Sklearn's Linear Regression module](https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LinearRegression.html) using the $R^2$ metric defined above. It is clearly be clearly seen that the model code from scratch performs exactly same as compared to the sklearn's model.
+The above code compares the performance of the code using above intuition with the widely used [Sklearn's Linear Regression module](https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LinearRegression.html) using the $R^2$ metric defined above. It is clearly seen that the regression model from scratch performs exactly same as compared to the sklearn's model.
 
 _<span class = 'citalic'>Note:</span> Concepts including Gradient Descent and Multiple Regression are intentionally not included in this article for simplicity. This article presents the intuition behing Linear Regression and an insight that Machine Learning/Gradient Descent need not always be used to solve simple problems like Linear Regression._

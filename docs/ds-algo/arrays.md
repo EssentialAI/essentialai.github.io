@@ -231,7 +231,9 @@ class Solution:
 <Tabs>
   <TabItem value="apple" label="Description" default>
 
- A **permutation** of an array of integers is an arrangement of its members into a sequence or linear order.
+A **permutation** of an array of integers is an arrangement of its members into a sequence or linear order.
+
+<br/>
 
 For example, for `arr = [1,2,3]`, the following are considered permutations of `arr: [1,2,3], [1,3,2], [3,1,2], [2,3,1]`.
 
@@ -262,9 +264,11 @@ Output: [1,5,1]
   </TabItem>
   <TabItem value="orange" label="Intuition">
   
-We shall use [1,3,5,4,2] as the working example.
+<p class = 'high'>We shall use [1,3,5,4,2] as the working example.</p>
 
-  The steps to solve the problem are:
+<br/>
+
+The steps to solve the problem are:
 
   1. Traverse the array from behind and find the index of the first element where `arr[i] < arr[i+1]` (i=1).
   2. Traverse the array from behind again and find the index of the first element that is greater than `arr[i]` (j=3).
@@ -309,6 +313,327 @@ class Solution:
 
         nums[first], nums[second] = nums[second], nums[first]
         nums[first+1:] = reversed(nums[first+1:])
+```
+  </TabItem>
+</Tabs>
+
+</div>
+
+<br/>
+
+## Question 4 - [Maximum Sub array](https://leetcode.com/problems/maximum-subarray/)
+
+<div class = 'border'>
+
+<!-- Description: Given an $m \times n$ integer matrix matrix, if an element is 0, set its entire row and column to 0's. <span class = 'citalic'>You must do it in place.</span>
+
+<div align="center"><img class = 'image-rounded' align = "center" alt="Alt Text" src={require('/docs/imgs/ds-algo/arrays/q1.jpg').default} width = "520px"/></div>
+
+<br/> -->
+<Tabs>
+  <TabItem value="apple" label="Description" default>
+
+Given an integer array `nums`, find the contiguous **subarray** (containing at least one number) which has the **largest sum and return its sum.**
+
+A `subarray` is a `contiguous part` of an array.
+
+<br/>
+
+```
+Input: nums = [-2,1,-3,4,-1,2,1,-5,4]
+Output: 6
+Explanation: [4,-1,2,1] has the largest sum = 6.
+```
+
+```
+Input: nums = [5,4,-1,7,8]
+Output: 23
+```
+
+  </TabItem>
+  <TabItem value="orange" label="Intuition">
+  <h3 class = 'high'>Brute force approach:</h3>
+
+  1. Traverse through the array two times, one `i` and one `j`, from 0 to len(array). This is done to find all the subarrays.
+  2. Then traverse between `i` to `j`, using `k`. Initialize the sum to 0 before `k`'s loop and increment the sum.
+  3. If the sum of this subarray is greater than `max_sum`, update `max_sum`.
+
+Time complexity of this approach is $O(N^3)$ and exceeds the time limit in leetcode.
+
+  <br/>
+
+<h3 class = 'high'>Optimized brute force approach:</h3>
+
+* You can eliminate the last for loop by initializing sum before `j`'s loop and incrementing sum using `j` element.
+
+Time complexity of this approach is $O(N^2)$ and exceeds the time limit in leetcode.
+
+<br/>
+
+<h3 class = 'high'>Kadane's algorithm:</h3>
+
+  1. Take two varibles, `sum` and `max_sum`. Increment this sum by traversing the array. If `sum>max_sum`, then update the `max_sum`.
+  2. If running `sum` less than `0`, then re-initiate sum to 0.
+
+Time complexity of this approach is $O(N)$ and is accepted in leetcode.
+
+  </TabItem>
+  <TabItem value="banana" label="Code">
+
+<h3 class = 'padd'>Code for the brute force approach:</h3>
+
+```python
+class Solution:
+    def maxSubArray(self, nums: List[int]) -> int:
+
+        len1 = len(nums)
+        max_sum= -1000
+
+        for i in range(len1):
+            for j in range(i, len1):
+                sum1 = 0
+                for k in range(i,j+1):
+                    # print(k)
+                    sum1+=nums[k]
+                    # print("sum1 is", sum1)
+                if sum1>max_sum:
+                    max_sum=sum1
+
+        print(max_sum)
+```
+
+<h3 class = 'padd'>Code for the optimized brute force:</h3>
+
+```python
+class Solution:
+    def maxSubArray(self, nums: List[int]) -> int:
+      
+        len1 = len(nums)
+        max_sum= -1000
+
+        for i in range(len1):
+            sum1=0
+            for j in range(i, len1):
+                sum1+=nums[j]
+                if sum1>max_sum:
+                    max_sum=sum1
+
+        print(max_sum)
+```
+
+<h3 class = 'padd'>Kadane's Algorithm code:</h3>
+
+```python
+class Solution:
+    def maxSubArray(self, nums: List[int]) -> int:
+        
+        len1 = len(nums)
+        max_sum= nums[0]
+        sum1 = 0
+
+        for i in range(len1):
+            sum1+=nums[i]
+            max_sum  = max(sum1, max_sum)
+            
+            if sum1<=0:
+                sum1 = 0
+        
+        return max_sum
+```
+  </TabItem>
+</Tabs>
+
+</div>
+
+<br/>
+
+
+## Question 5 - [Sort Colors](https://leetcode.com/problems/sort-colors/)
+
+<div class = 'border'>
+
+<!-- Description: Given an $m \times n$ integer matrix matrix, if an element is 0, set its entire row and column to 0's. <span class = 'citalic'>You must do it in place.</span>
+
+<div align="center"><img class = 'image-rounded' align = "center" alt="Alt Text" src={require('/docs/imgs/ds-algo/arrays/q1.jpg').default} width = "520px"/></div>
+
+<br/> -->
+<Tabs>
+  <TabItem value="apple" label="Description" default>
+
+Given an array `nums` with `n` objects colored red, white, or blue, sort them **in-place** so that objects of the same color are adjacent, with the colors in the order red, white, and blue. We will use the integers `0`, `1`, and `2` to represent the color red, white, and blue, respectively.
+
+<p class = 'citalic'>You must solve this problem without using the library's sort function.</p>
+
+<br/>
+
+```
+Input: nums = [2,0,2,1,1,0]
+Output: [0,0,1,1,2,2]
+```
+
+  </TabItem>
+  <TabItem value="orange" label="Intuition">
+  <h3 class = 'high'>Brute force approach:</h3>
+
+The important takeaway/detail here is that, the elements in the array are either `0` or `1` or `2`. In the brute force approach, just count the number of `0`, `1`, and `2` and set the elements in the first count to `0`, second count to `1` and third count to `2`.
+
+  <br/>
+
+<h3 class = 'high'>Optimized approach:</h3>
+
+This algorithm is a variation of "Dutch National Flag algorithm" and it can be solved in 1 pass. i.e., $O(N)$.
+
+<br/>
+
+  1. We initialize `3` pointers. We place the `low` pointer at the start, `mid` pointer at the start, and `high` pointer at the end.
+  2. The idea here is that all the numbers from `[0 to low-1]` are 0, and `[high-1 to end]` are 2.
+  3. Whenever the `mid` pointer points to `0`, we swap the values at `low` and `mid`. Then we increment both `low` and `mid`.
+  4. When `mid` points to `1`, we just increment `mid` and not `low` without any swapping.
+  5. When `mid` points to `2`, we swap elements at `high` and `mid`. **We decrement `high` by 1**.
+
+This approach takes $O(N)$ time complexity.
+
+  </TabItem>
+  <TabItem value="banana" label="Code">
+
+<h3 class = 'padd'>Code for the brute force approach:</h3>
+
+```python
+class Solution:
+    def sortColors(self, nums: List[int]) -> None:
+        """
+        Do not return anything, modify nums in-place instead.
+        """
+        count0=0
+        count1 = 0
+        count2 =0
+        
+        for i in nums:
+            if i == 0:
+                count0+=1
+            elif i==1:
+                count1+=1
+            else:
+                count2+=1
+                
+        for i in range(count0):
+            nums[i]=0
+        for i in range(count1):
+            nums[i+count0]=1
+        for i in range(count2):
+            nums[i+count0+count1]=2
+```
+
+<h3 class = 'padd'>Optimized code:</h3>
+
+```python
+class Solution:
+    def sortColors(self, nums: List[int]) -> None:
+        """
+        Do not return anything, modify nums in-place instead.
+        """
+        low = 0
+        mid = 0
+        high = len(nums)-1
+        
+        for i in range(len(nums)):
+            if nums[mid] == 0:
+                nums[low], nums[mid] = nums[mid], nums[low]
+                low+=1
+                mid+=1
+            elif nums[mid] == 1:
+                mid+=1
+            elif nums[mid] ==2:
+                nums[mid], nums[high] = nums[high], nums[mid]
+                high-=1
+
+```
+  </TabItem>
+</Tabs>
+
+</div>
+
+<br/>
+
+## Question 6 - [Best Time to Buy and Sell Stock](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/)
+
+<div class = 'border'>
+
+<!-- Description: Given an $m \times n$ integer matrix matrix, if an element is 0, set its entire row and column to 0's. <span class = 'citalic'>You must do it in place.</span>
+
+<div align="center"><img class = 'image-rounded' align = "center" alt="Alt Text" src={require('/docs/imgs/ds-algo/arrays/q1.jpg').default} width = "520px"/></div>
+
+<br/> -->
+<Tabs>
+  <TabItem value="apple" label="Description" default>
+
+You are given an array `prices` where `prices[i]` is the price of a given stock on the `ith` day.
+
+You want to maximize your profit by choosing a **single day** to buy one stock and choosing a **different day in the future** to sell that stock.
+
+_Return the maximum profit you can achieve from this transaction. If you cannot achieve any profit, return `0`._
+
+<br/>
+
+```
+Input: prices = [7,1,5,3,6,4]
+Output: 5
+Explanation: Buy on day 2 (price = 1) and sell on day 5 (price = 6), profit = 6-1 = 5.
+Note that buying on day 2 and selling on day 1 is not allowed because you must buy before you sell.
+```
+
+```
+Input: prices = [7,6,4,3,1]
+Output: 0
+Explanation: In this case, no transactions are done and the max profit = 0.
+```
+
+  </TabItem>
+  <TabItem value="orange" label="Intuition">
+  <h3 class = 'high'>Brute force approach:</h3>
+
+  1. Traverse through the array two times to find the maximum difference `diff` for a given `i` and `j`. Update `diff` only when the diff exceed current value.
+This method takes $O(N^2)$ time complexity and $O(1)$ space complexity. 
+
+<h3 class = 'high'>Optimized approach:</h3>
+
+  1. Initialize two variables `minimum`=`prices[0]` and `profit`=`0`.
+  2. Update your `profit` and `minimum` based on the value at `i`.
+  3. This way you will get the minimum value and the maximum profit just by traversing once.
+
+This approach takes $O(N)$ time complexity.
+
+  </TabItem>
+  <TabItem value="banana" label="Code">
+
+<h3 class = 'padd'>Code for the brute force approach:</h3>
+
+```python
+class Solution:
+    def maxProfit(self, prices: List[int]) -> int:
+        diff = 0
+        for i in range(len(prices)):
+            smallest = prices[i]
+            for j in range(i, len(prices)):
+                if prices[j]>smallest:
+                    diff = max(diff, prices[j]-smallest)
+
+        return diff
+```
+
+<h3 class = 'padd'>Optimized code:</h3>
+
+```python
+class Solution:
+    def maxProfit(self, prices: List[int]) -> int:
+        profit = 0
+        minimum = prices[0]
+        
+        for i in range(1, len(prices)):
+            minimum = min(minimum, prices[i])
+            profit = max(profit, prices[i]-minimum)
+        
+        return profit
 ```
   </TabItem>
 </Tabs>
